@@ -28,7 +28,7 @@ jobs:
   bump:
     if: github.repository_owner == 'langchain-ai'
     name: "Open PR if uv has a newer release"
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, anvil-ci-linux]
     permissions:
       contents: write
       pull-requests: write
